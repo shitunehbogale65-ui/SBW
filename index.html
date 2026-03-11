@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shituneh Bogale | Portfolio</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #2ecc71;
+      --bg: #0a0a0a;
+      --card-bg: #151515;
+      --text: #ffffff;
+      --text-dim: #a0a0a0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; top: 0 !important; }
+    html { scroll-behavior: smooth; }
+
+    /* --- NAVIGATION --- */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      padding: 1rem 8%;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(15px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    #google_translate_element { min-width: 140px; padding: 2px; border-radius: 4px; background: #222; border: 1px solid #333; }
+    .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame { display: none !important; }
+    .goog-te-gadget { color: transparent !important; }
+    .goog-te-gadget-simple { background-color: transparent !important; border: none !important; display: flex !important; align-items: center !important; }
+    .goog-te-menu-value span { color: #fff !important; font-size: 12px !important; }
+
+    /* --- SECTIONS --- */
+    .section { padding: 80px 10%; }
+    .section-title { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
+    .section-title span { color: var(--accent); }
+
+    .home { height: 100vh; display: flex; align-items: center; padding: 0 10%; }
+    .hero-content { flex: 1; }
+    .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; margin-bottom: 1rem; }
+    .typing { color: var(--accent); }
+    .hero-img img { width: 380px; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 20px 20px 0px var(--accent); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
+    .about-img img { width: 100%; border-radius: 15px; border: 1px solid #333; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .skill-card { background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid #222; transition: 0.3s; }
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+    .skill-card h3 { color: var(--accent); margin-bottom: 10px; }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center; }
+    .project-card { background: #111; border-radius: 20px; padding: 2.5rem; border: 1px solid #222; max-width: 500px; margin: 0 auto; }
+    .project-card:hover { border-color: var(--accent); }
+    .project-tag { font-size: 0.7rem; color: var(--accent); border: 1px solid var(--accent); padding: 2px 8px; border-radius: 20px; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
+
+    .cta { padding: 1rem 2rem; background: var(--accent); color: #000; text-decoration: none; font-weight: 700; border-radius: 5px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
+    .cta:hover { background: #fff; transform: scale(1.05); }
+
+    @media (max-width: 992px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .hero-img { display: none; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="logo">SBW<span>.</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div id="google_translate_element"></div>
+    </div>
+  </nav>
+
+  <section class="home" id="home">
+    <div class="hero-content">
+      <h2 style="color: var(--accent); letter-spacing: 3px; font-size: 0.9rem; text-transform: uppercase;">Software Designer</h2>
+      <h1>Shituneh Bogale</h1>
+      <p style="font-size: 1.8rem; color: var(--text-dim);">I am a <span class="typing"></span></p>
+      <br>
+      <a href="#projects" class="cta">Explore My Work</a>
+    </div>
+    <div class="hero-img">
+      <img src="img.jpg" alt="Shituneh Bogale">
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="imgg.jpg" alt="About Shituneh">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title" style="text-align: left;">My <span>Full Story</span></h2>
+        <p style="margin-bottom: 1.2rem; text-align: justify;">
+          I am <strong>Shituneh Bogale</strong>, a dedicated web developer and systems architect currently pursuing my advanced studies at the <strong>University of Gondar</strong>, within the College of Informatics. My journey into the world of technology is driven by a deep-seated desire to solve real-world problems through digital innovation.
+        </p>
+        <p style="margin-bottom: 1.2rem; text-align: justify;">
+          I was born and raised in <strong>Gojjam, Amhara Region</strong>, a place that shaped my identity and instilled in me a strong sense of community and heritage. My life and work are deeply influenced by my <strong>Orthodox Tewahedo</strong> faith, which provides me with a moral compass and the spiritual strength to navigate the complexities of life and the fast-paced tech industry.
+        </p>
+        <p style="margin-bottom: 1.2rem; text-align: justify;">
+          My path has not been without its trials. Since I began my educational journey in <strong>2000 E.C.</strong>, I have faced significant personal tragedies, including the loss of my beloved father and brother. These experiences, while painful, did not break me; instead, they forged a resilience and a relentless work ethic within me. I believe that every challenge is an opportunity to grow stronger and more capable.
+        </p>
+        <p style="margin-bottom: 1.5rem; text-align: justify;">
+          Today, I channel that resilience into my professional life. I am committed to contributing to Ethiopia's digital transformation by building secure, efficient, and user-centric software. Whether I am designing complex system architectures or coding modern web interfaces, my goal remains the same: to deliver excellence and create value for my clients and my country.
+        </p>
+        <a href="#contact" class="cta">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" style="background: #050505;">
+    <h2 class="section-title">Technical <span>Stack</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend Development</h3>
+        <p>Expertise in crafting responsive, high-performance web interfaces using HTML5, CSS3, and modern JavaScript standards.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Backend & Databases</h3>
+        <p>Specializing in secure server-side development with PHP and managing robust SQL database architectures.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Systems Architecture</h3>
+        <p>Highly skilled in UML modeling, system requirement analysis, and designing scalable software solutions.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Professional Tools</h3>
+        <p>Proficient in Git version control, Oracle SQL, and technical documentation with advanced Microsoft Word formatting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title">Current <span>Venture</span></h2>
+    <div class="projects-grid">
+      <div class="project-card" style="text-align: center;">
+        <span class="project-tag">Live Platform</span>
+        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">SBW Company</h3>
+        <p style="color: var(--text-dim); margin-bottom: 25px;">
+          An integrated digital portal designed for professional networking, digital services, and user registration. This platform represents my commitment to building accessible technology for income generation.
+        </p>
+        <a href="https://sbwcompany.infinityfreeapp.com/register.php?ref=0001" target="_blank" rel="noopener noreferrer" class="cta">Visit Official Portal ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <form action="https://formsubmit.co/shitunehbogale3@gmail.com" method="POST" style="max-width: 600px; margin: 0 auto;">
+      <input type="text" name="name" placeholder="Full Name" required style="width: 100%; padding: 1rem; background: #111; border: 1px solid #333; color: #fff; margin-bottom: 1rem; border-radius: 5px;">
+      <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 1rem; background: #111; border: 1px solid #333; color: #fff; margin-bottom: 1rem; border-radius: 5px;">
+      <textarea name="message" rows="5" placeholder="Describe your project or inquiry..." required style="width: 100%; padding: 1rem; background: #111; border: 1px solid #333; color: #fff; margin-bottom: 1rem; border-radius: 5px;"></textarea>
+      <button type="submit" class="cta" style="width: 100%;">Send Inquiry</button>
+    </form>
+  </section>
+
+  <footer style="padding: 40px; text-align: center; border-top: 1px solid #222; color: var(--text-dim);">
+    <p>&copy; 2026 Shituneh Bogale Woldie | University of Gondar</p>
+  </footer>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    const textElement = document.querySelector(".typing");
+    const words = ["Software Designer.", "Full-stack Developer.", "Systems Architect."];
+    let wordIndex = 0, charIndex = 0, isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      textElement.textContent = isDeleting ? currentWord.substring(0, charIndex - 1) : currentWord.substring(0, charIndex + 1);
+      charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000); 
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", typeEffect);
+  </script>
+</body>
+</html>
